@@ -23,7 +23,7 @@ app.get("/detail", async function (req, res) {
   const id = repsonse.body.id;
 
   const data = {
-    img: req.query.img,
+    img: req.query.img.replace("%2F", "/"),
     title: req.query.title,
     price: req.query.price,
     unit: req.query.unit,
