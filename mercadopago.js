@@ -33,9 +33,9 @@ const crear_pago = async (data) => {
       },
     },
     back_urls: {
-      success: "http://localhost:3000/success",
-      failure: "http://localhost:3000/failure",
-      pending: "http://localhost:3000/pending",
+      success: "https://mp-checkout-pro.onrender.com/success",
+      failure: "https://mp-checkout-pro.onrender.com/failure",
+      pending: "https://mp-checkout-pro.onrender.com/pending",
     },
     auto_return: "all",
     payment_methods: {
@@ -46,7 +46,7 @@ const crear_pago = async (data) => {
       ],
       installments: 6,
     },
-    notification_url: "https://unripedimgreyfirm.yagopajarino.repl.co/webhook",
+    notification_url: "https://mp-checkout-pro.onrender.com/webhook",
     external_reference: "yago977@hotmail.com",
   };
 
