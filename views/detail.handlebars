@@ -84,7 +84,22 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <button type="submit" class="mercadopago-button" formmethod="post"></button>
+                            <script>
+                                const mp = new MercadoPago('TEST-8ffee731-6e35-4009-8742-1751c41dbca6', {
+                                    locale: 'es-AR'
+                                });
+
+                                mp.checkout({
+                                    preference: {
+                                    id: "{{pref_id}}"
+                                    },
+                                    render: {
+                                    container: '.mercadopago-button',
+                                    label:"Pagar la compra"
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
