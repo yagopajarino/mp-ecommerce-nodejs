@@ -12,7 +12,7 @@ const crear_pago = async (data) => {
         id: "1234",
         title: data.title,
         currency_id: "ARS",
-        picture_url: data.img,
+        picture_url: `https://mp-checkout-pro.onrender.com${data.img.slice(1)}`,
         description: "Dispositivo móvil de Tienda e-commerce",
         quantity: parseInt(data.unit),
         unit_price: parseFloat(data.price),
@@ -21,7 +21,7 @@ const crear_pago = async (data) => {
     payer: {
       name: "Lalo",
       surname: "Landa",
-      email: "yago977@gmail.com", //process.env.EMAIL,
+      email: process.env.EMAIL,
       phone: {
         area_code: "11",
         number: 48215403,
