@@ -2,7 +2,7 @@ var mercadopago = require("mercadopago");
 
 const crear_pago = async (data) => {
   mercadopago.configure({
-    access_token: process.env.ACCESS_TOKEN_TEST,
+    access_token: process.env.ACCESS_TOKEN,
     integrator_id: process.env.INTEGRATOR_ID,
   });
 
